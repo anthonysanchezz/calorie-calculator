@@ -30,23 +30,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      lang="es"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">
+    <html lang="es">
 
-        {children}
+<head>
+<meta name="google-adsense-account" content="ca-pub-4335047551907086"/>
+</head>
 
-        {/* Script de Google AdSense */}
-        <Script
-          src="https://pagead2.googlesyndication.com/pagead/js?client=ca-pub-4335047551907086"
-          strategy="afterInteractive"
-          async
-          crossOrigin="anonymous"
-        />
+<body>
 
-      </body>
-    </html>
+{children}
+
+<Script
+src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4335047551907086"
+strategy="afterInteractive"
+async
+crossOrigin="anonymous"
+/>
+
+</body>
+
+</html>
   );
 }
