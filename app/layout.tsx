@@ -16,6 +16,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Calculadora de calorías",
   description: "Calcula tus calorías para perder peso, mantener o ganar masa muscular",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
