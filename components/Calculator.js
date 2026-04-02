@@ -91,10 +91,14 @@ export default function Calculator() {
       </button>
 
       {result && (
-        <div className="bg-gray-100 p-4 rounded-lg text-center">
-          <p className="text-gray-600">Calorías diarias</p>
-          <h3 className="text-3xl font-bold">{result} kcal</h3>
-        </div>
+        <>
+          <div className="bg-gray-100 p-4 rounded-lg text-center">
+            <p>Calorías diarias</p>
+            <h3>{result} kcal</h3>
+          </div>
+
+          <AdBanner />
+        </>
       )}
     </div>
   );

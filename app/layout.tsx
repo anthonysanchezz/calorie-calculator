@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
+import AdBanner from "@/components/AdBanner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,11 +35,24 @@ export default function RootLayout({
 
       <head>
         <meta name="google-adsense-account" content="ca-pub-4335047551907086"/>
+
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4335047551907086"
+          crossOrigin="anonymous"
+        />
       </head>
 
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col pb-24">
 
         {children}
+
+        {/* Sticky Ad */}
+        <div className="fixed bottom-0 left-0 w-full bg-white border-t z-50 md:hidden py-2">
+          <div className="max-w-4xl mx-auto">
+            <AdBanner />
+          </div>
+        </div>
 
         {/* Footer */}
         <footer className="text-center text-sm text-gray-500 py-10 border-t mt-20">
