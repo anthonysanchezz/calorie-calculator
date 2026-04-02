@@ -32,23 +32,35 @@ export default function RootLayout({
   return (
     <html lang="es">
 
-<head>
-<meta name="google-adsense-account" content="ca-pub-4335047551907086"/>
-</head>
+      <head>
+        <meta name="google-adsense-account" content="ca-pub-4335047551907086"/>
+      </head>
 
-<body>
+      <body className="min-h-full flex flex-col">
 
-{children}
+        {children}
 
-<Script
-src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4335047551907086"
-strategy="afterInteractive"
-async
-crossOrigin="anonymous"
-/>
+        {/* Footer */}
+        <footer className="text-center text-sm text-gray-500 py-10 border-t mt-20">
 
-</body>
+          <div className="flex gap-6 justify-center flex-wrap">
 
-</html>
+            <a href="/about">About</a>
+
+            <a href="/privacy-policy">Privacy Policy</a>
+
+            <a href="/terms">Terms</a>
+
+            <a href="/contact">Contact</a>
+
+            <a href="/disclaimer">Disclaimer</a>
+
+          </div>
+
+        </footer>
+
+      </body>
+
+    </html>
   );
 }
